@@ -1,0 +1,1 @@
+bison -d -t parser.y;lex lexer.l;g++ lex.yy.c parser.tab.c;./a.out input.java out.dot;dot -Tpng out.dot -o ../out.png;bison -d -t grammer.y;lex lexer.l;g++ lex.yy.c grammer.tab.c;./a.out input.java out.dot;dot -Tpng out.dot -o ../out.png;
