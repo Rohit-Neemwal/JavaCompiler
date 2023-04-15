@@ -1,0 +1,503 @@
+// dot -Tps out.dot -o out.ps
+
+graph "Abstract Syntax Tree"
+{
+	fontname="Helvetica,Arial,sans-serif"
+	node [fontsize=10, width=".2", height=".2", margin=0]
+	edge [fontsize=6]
+	graph[fontsize=8];
+
+	label="Abstract Syntax Tree"
+
+	n122 ;
+	n122 [label="input"] ;
+	n122 -- n121 ;
+
+	n121 ;
+	n121 [label="TopLevelClassDeclarations"] ;
+	n121 -- n47 ;
+	n121 -- n118 ;
+
+	n47 ;
+	n47 [label="TopLevelClassDeclarations"] ;
+	n47 -- n0 ;
+	n47 -- n44 ;
+
+	n118 ;
+	n118 [label="NormalClassDeclaration"] ;
+	n118 -- n48 ;
+	n118 -- n119 ;
+	n118 -- n120 ;
+	n118 -- n49 ;
+	n118 -- n51 ;
+	n118 -- n53 ;
+	n118 -- n115 ;
+
+	n0 ;
+	n0 [label="TopLevelClassDeclarations"] ;
+	n0 -- n1 ;
+
+	n44 ;
+	n44 [label="NormalClassDeclaration"] ;
+	n44 -- n45 ;
+	n44 -- n46 ;
+	n44 -- n2 ;
+	n44 -- n4 ;
+	n44 -- n6 ;
+	n44 -- n41 ;
+
+	n48 ;
+	n48 [label="Keyword(public)"] ;
+
+	n119 ;
+	n119 [label="Keyword(class)"] ;
+
+	n120 ;
+	n120 [label="ID(Main)"] ;
+
+	n49 ;
+	n49 [label="ClassExtends"] ;
+	n49 -- n50 ;
+
+	n51 ;
+	n51 [label="ClassImplements"] ;
+	n51 -- n52 ;
+
+	n53 ;
+	n53 [label="ClassPermits"] ;
+	n53 -- n54 ;
+
+	n115 ;
+	n115 [label="ClassBody"] ;
+	n115 -- n116 ;
+	n115 -- n114 ;
+	n115 -- n117 ;
+
+	n1 ;
+	n1 [label="empty"] ;
+
+	n45 ;
+	n45 [label="Keyword(class)"] ;
+
+	n46 ;
+	n46 [label="ID(OuterClass)"] ;
+
+	n2 ;
+	n2 [label="ClassExtends"] ;
+	n2 -- n3 ;
+
+	n4 ;
+	n4 [label="ClassImplements"] ;
+	n4 -- n5 ;
+
+	n6 ;
+	n6 [label="ClassPermits"] ;
+	n6 -- n7 ;
+
+	n41 ;
+	n41 [label="ClassBody"] ;
+	n41 -- n42 ;
+	n41 -- n40 ;
+	n41 -- n43 ;
+
+	n50 ;
+	n50 [label="empty"] ;
+
+	n52 ;
+	n52 [label="empty"] ;
+
+	n54 ;
+	n54 [label="empty"] ;
+
+	n116 ;
+	n116 [label="Separator({)"] ;
+
+	n114 ;
+	n114 [label="ClassBodyDeclarations"] ;
+	n114 -- n55 ;
+	n114 -- n112 ;
+
+	n117 ;
+	n117 [label="Separator(})"] ;
+
+	n3 ;
+	n3 [label="empty"] ;
+
+	n5 ;
+	n5 [label="empty"] ;
+
+	n7 ;
+	n7 [label="empty"] ;
+
+	n42 ;
+	n42 [label="Separator({)"] ;
+
+	n40 ;
+	n40 [label="ClassBodyDeclarations"] ;
+	n40 -- n17 ;
+	n40 -- n37 ;
+
+	n43 ;
+	n43 [label="Separator(})"] ;
+
+	n55 ;
+	n55 [label="ClassBodyDeclarations"] ;
+	n55 -- n56 ;
+
+	n112 ;
+	n112 [label="MethodDeclaration"] ;
+	n112 -- n57 ;
+	n112 -- n113 ;
+	n112 -- n62 ;
+	n112 -- n109 ;
+
+	n17 ;
+	n17 [label="ClassBodyDeclarations"] ;
+	n17 -- n8 ;
+	n17 -- n15 ;
+
+	n37 ;
+	n37 [label="NormalClassDeclaration"] ;
+	n37 -- n38 ;
+	n37 -- n39 ;
+	n37 -- n18 ;
+	n37 -- n20 ;
+	n37 -- n22 ;
+	n37 -- n34 ;
+
+	n56 ;
+	n56 [label="empty"] ;
+
+	n57 ;
+	n57 [label="Keyword(public)"] ;
+
+	n113 ;
+	n113 [label="Keyword(static)"] ;
+
+	n62 ;
+	n62 [label="MethodHeader"] ;
+	n62 -- n63 ;
+	n62 -- n58 ;
+
+	n109 ;
+	n109 [label="Block"] ;
+	n109 -- n110 ;
+	n109 -- n108 ;
+	n109 -- n111 ;
+
+	n8 ;
+	n8 [label="ClassBodyDeclarations"] ;
+	n8 -- n9 ;
+
+	n15 ;
+	n15 [label="FieldDeclaration"] ;
+	n15 -- n10 ;
+	n15 -- n13 ;
+	n15 -- n16 ;
+
+	n38 ;
+	n38 [label="Keyword(class)"] ;
+
+	n39 ;
+	n39 [label="ID(InnerClass)"] ;
+
+	n18 ;
+	n18 [label="ClassExtends"] ;
+	n18 -- n19 ;
+
+	n20 ;
+	n20 [label="ClassImplements"] ;
+	n20 -- n21 ;
+
+	n22 ;
+	n22 [label="ClassPermits"] ;
+	n22 -- n23 ;
+
+	n34 ;
+	n34 [label="ClassBody"] ;
+	n34 -- n35 ;
+	n34 -- n33 ;
+	n34 -- n36 ;
+
+	n63 ;
+	n63 [label="Keyword(void)"] ;
+
+	n58 ;
+	n58 [label="MethodDeclarator"] ;
+	n58 -- n59 ;
+	n58 -- n60 ;
+	n58 -- n61 ;
+
+	n110 ;
+	n110 [label="Separator({)"] ;
+
+	n108 ;
+	n108 [label="BlockStatements"] ;
+	n108 -- n87 ;
+	n108 -- n106 ;
+
+	n111 ;
+	n111 [label="Separator(})"] ;
+
+	n9 ;
+	n9 [label="empty"] ;
+
+	n10 ;
+	n10 [label="Keyword(int)"] ;
+
+	n13 ;
+	n13 [label="VariableDeclarator"] ;
+	n13 -- n11 ;
+	n13 -- n14 ;
+	n13 -- n12 ;
+
+	n16 ;
+	n16 [label="Separator(;)"] ;
+
+	n19 ;
+	n19 [label="empty"] ;
+
+	n21 ;
+	n21 [label="empty"] ;
+
+	n23 ;
+	n23 [label="empty"] ;
+
+	n35 ;
+	n35 [label="Separator({)"] ;
+
+	n33 ;
+	n33 [label="ClassBodyDeclarations"] ;
+	n33 -- n24 ;
+	n33 -- n31 ;
+
+	n36 ;
+	n36 [label="Separator(})"] ;
+
+	n59 ;
+	n59 [label="ID(main)"] ;
+
+	n60 ;
+	n60 [label="Separator(()"] ;
+
+	n61 ;
+	n61 [label="Separator())"] ;
+
+	n87 ;
+	n87 [label="BlockStatements"] ;
+	n87 -- n65 ;
+	n87 -- n78 ;
+
+	n106 ;
+	n106 [label="ExpressionStatement"] ;
+	n106 -- n101 ;
+	n106 -- n107 ;
+
+	n11 ;
+	n11 [label="ID(x)"] ;
+
+	n14 ;
+	n14 [label="OP(=)"] ;
+
+	n12 ;
+	n12 [label="Literal(10)"] ;
+
+	n24 ;
+	n24 [label="ClassBodyDeclarations"] ;
+	n24 -- n25 ;
+
+	n31 ;
+	n31 [label="FieldDeclaration"] ;
+	n31 -- n26 ;
+	n31 -- n29 ;
+	n31 -- n32 ;
+
+	n65 ;
+	n65 [label="ObjectDeclaration"] ;
+	n65 -- n64 ;
+	n65 -- n66 ;
+	n65 -- n67 ;
+	n65 -- n68 ;
+	n65 -- n69 ;
+	n65 -- n70 ;
+	n65 -- n71 ;
+	n65 -- n72 ;
+
+	n78 ;
+	n78 [label="ObjectDeclaration"] ;
+	n78 -- n74 ;
+	n78 -- n79 ;
+	n78 -- n80 ;
+	n78 -- n77 ;
+	n78 -- n81 ;
+	n78 -- n82 ;
+	n78 -- n83 ;
+	n78 -- n84 ;
+	n78 -- n85 ;
+	n78 -- n86 ;
+
+	n101 ;
+	n101 [label="MethodInvocation"] ;
+	n101 -- n89 ;
+	n101 -- n102 ;
+	n101 -- n103 ;
+	n101 -- n104 ;
+	n101 -- n100 ;
+	n101 -- n105 ;
+
+	n107 ;
+	n107 [label="Separator(;)"] ;
+
+	n25 ;
+	n25 [label="empty"] ;
+
+	n26 ;
+	n26 [label="Keyword(int)"] ;
+
+	n29 ;
+	n29 [label="VariableDeclarator"] ;
+	n29 -- n27 ;
+	n29 -- n30 ;
+	n29 -- n28 ;
+
+	n32 ;
+	n32 [label="Separator(;)"] ;
+
+	n64 ;
+	n64 [label="ID(OuterClass)"] ;
+
+	n66 ;
+	n66 [label="ID(myOuter)"] ;
+
+	n67 ;
+	n67 [label="OP(=)"] ;
+
+	n68 ;
+	n68 [label="Keyword(new)"] ;
+
+	n69 ;
+	n69 [label="ID(OuterClass)"] ;
+
+	n70 ;
+	n70 [label="Separator(()"] ;
+
+	n71 ;
+	n71 [label="Separator())"] ;
+
+	n72 ;
+	n72 [label="Separator(;)"] ;
+
+	n74 ;
+	n74 [label="TypeName"] ;
+	n74 -- n73 ;
+	n74 -- n75 ;
+	n74 -- n76 ;
+
+	n79 ;
+	n79 [label="ID(myInner)"] ;
+
+	n80 ;
+	n80 [label="OP(=)"] ;
+
+	n77 ;
+	n77 [label="ID(myOuter)"] ;
+
+	n81 ;
+	n81 [label="Separator(.)"] ;
+
+	n82 ;
+	n82 [label="Keyword(new)"] ;
+
+	n83 ;
+	n83 [label="ID(InnerClass)"] ;
+
+	n84 ;
+	n84 [label="Separator(()"] ;
+
+	n85 ;
+	n85 [label="Separator())"] ;
+
+	n86 ;
+	n86 [label="Separator(;)"] ;
+
+	n89 ;
+	n89 [label="TypeName"] ;
+	n89 -- n88 ;
+	n89 -- n90 ;
+	n89 -- n91 ;
+
+	n102 ;
+	n102 [label="Separator(.)"] ;
+
+	n103 ;
+	n103 [label="ID(println)"] ;
+
+	n104 ;
+	n104 [label="Separator(()"] ;
+
+	n100 ;
+	n100 [label="OP(+)"] ;
+	n100 -- n93 ;
+	n100 -- n97 ;
+
+	n105 ;
+	n105 [label="Separator())"] ;
+
+	n27 ;
+	n27 [label="ID(y)"] ;
+
+	n30 ;
+	n30 [label="OP(=)"] ;
+
+	n28 ;
+	n28 [label="Literal(5)"] ;
+
+	n73 ;
+	n73 [label="ID(OuterClass)"] ;
+
+	n75 ;
+	n75 [label="Separator(.)"] ;
+
+	n76 ;
+	n76 [label="ID(InnerClass)"] ;
+
+	n88 ;
+	n88 [label="ID(System)"] ;
+
+	n90 ;
+	n90 [label="Separator(.)"] ;
+
+	n91 ;
+	n91 [label="ID(out)"] ;
+
+	n93 ;
+	n93 [label="TypeName"] ;
+	n93 -- n92 ;
+	n93 -- n94 ;
+	n93 -- n95 ;
+
+	n97 ;
+	n97 [label="TypeName"] ;
+	n97 -- n96 ;
+	n97 -- n98 ;
+	n97 -- n99 ;
+
+	n92 ;
+	n92 [label="ID(myInner)"] ;
+
+	n94 ;
+	n94 [label="Separator(.)"] ;
+
+	n95 ;
+	n95 [label="ID(y)"] ;
+
+	n96 ;
+	n96 [label="ID(myOuter)"] ;
+
+	n98 ;
+	n98 [label="Separator(.)"] ;
+
+	n99 ;
+	n99 [label="ID(x)"] ;
+
+}

@@ -1,0 +1,615 @@
+// dot -Tps out.dot -o out.ps
+
+graph "Abstract Syntax Tree"
+{
+	fontname="Helvetica,Arial,sans-serif"
+	node [fontsize=10, width=".2", height=".2", margin=0]
+	edge [fontsize=6]
+	graph[fontsize=8];
+
+	label="Abstract Syntax Tree"
+
+	n150 ;
+	n150 [label="input"] ;
+	n150 -- n149 ;
+
+	n149 ;
+	n149 [label="TopLevelClassDeclarations"] ;
+	n149 -- n0 ;
+	n149 -- n146 ;
+
+	n0 ;
+	n0 [label="TopLevelClassDeclarations"] ;
+	n0 -- n1 ;
+
+	n146 ;
+	n146 [label="NormalClassDeclaration"] ;
+	n146 -- n147 ;
+	n146 -- n148 ;
+	n146 -- n2 ;
+	n146 -- n4 ;
+	n146 -- n6 ;
+	n146 -- n143 ;
+
+	n1 ;
+	n1 [label="empty"] ;
+
+	n147 ;
+	n147 [label="Keyword(class)"] ;
+
+	n148 ;
+	n148 [label="ID(test_25)"] ;
+
+	n2 ;
+	n2 [label="ClassExtends"] ;
+	n2 -- n3 ;
+
+	n4 ;
+	n4 [label="ClassImplements"] ;
+	n4 -- n5 ;
+
+	n6 ;
+	n6 [label="ClassPermits"] ;
+	n6 -- n7 ;
+
+	n143 ;
+	n143 [label="ClassBody"] ;
+	n143 -- n144 ;
+	n143 -- n142 ;
+	n143 -- n145 ;
+
+	n3 ;
+	n3 [label="empty"] ;
+
+	n5 ;
+	n5 [label="empty"] ;
+
+	n7 ;
+	n7 [label="empty"] ;
+
+	n144 ;
+	n144 [label="Separator({)"] ;
+
+	n142 ;
+	n142 [label="ClassBodyDeclarations"] ;
+	n142 -- n8 ;
+	n142 -- n140 ;
+
+	n145 ;
+	n145 [label="Separator(})"] ;
+
+	n8 ;
+	n8 [label="ClassBodyDeclarations"] ;
+	n8 -- n9 ;
+
+	n140 ;
+	n140 [label="MethodDeclaration"] ;
+	n140 -- n10 ;
+	n140 -- n141 ;
+	n140 -- n22 ;
+	n140 -- n137 ;
+
+	n9 ;
+	n9 [label="empty"] ;
+
+	n10 ;
+	n10 [label="Keyword(public)"] ;
+
+	n141 ;
+	n141 [label="Keyword(static)"] ;
+
+	n22 ;
+	n22 [label="MethodHeader"] ;
+	n22 -- n23 ;
+	n22 -- n18 ;
+
+	n137 ;
+	n137 [label="Block"] ;
+	n137 -- n138 ;
+	n137 -- n136 ;
+	n137 -- n139 ;
+
+	n23 ;
+	n23 [label="Keyword(void)"] ;
+
+	n18 ;
+	n18 [label="MethodDeclarator"] ;
+	n18 -- n19 ;
+	n18 -- n20 ;
+	n18 -- n17 ;
+	n18 -- n21 ;
+
+	n138 ;
+	n138 [label="Separator({)"] ;
+
+	n136 ;
+	n136 [label="BlockStatements"] ;
+	n136 -- n95 ;
+	n136 -- n132 ;
+
+	n139 ;
+	n139 [label="Separator(})"] ;
+
+	n19 ;
+	n19 [label="ID(main)"] ;
+
+	n20 ;
+	n20 [label="Separator(()"] ;
+
+	n17 ;
+	n17 [label="FormalParameter"] ;
+	n17 -- n11 ;
+	n17 -- n15 ;
+
+	n21 ;
+	n21 [label="Separator())"] ;
+
+	n95 ;
+	n95 [label="BlockStatements"] ;
+	n95 -- n60 ;
+	n95 -- n89 ;
+
+	n132 ;
+	n132 [label="WhileStatement"] ;
+	n132 -- n133 ;
+	n132 -- n134 ;
+	n132 -- n102 ;
+	n132 -- n135 ;
+	n132 -- n129 ;
+
+	n11 ;
+	n11 [label="Keyword(int)"] ;
+
+	n15 ;
+	n15 [label="VariableDeclaratorId"] ;
+	n15 -- n16 ;
+	n15 -- n12 ;
+
+	n60 ;
+	n60 [label="BlockStatements"] ;
+	n60 -- n40 ;
+	n60 -- n56 ;
+
+	n89 ;
+	n89 [label="BasicForStatement"] ;
+	n89 -- n90 ;
+	n89 -- n91 ;
+	n89 -- n66 ;
+	n89 -- n92 ;
+	n89 -- n71 ;
+	n89 -- n93 ;
+	n89 -- n73 ;
+	n89 -- n94 ;
+	n89 -- n86 ;
+
+	n133 ;
+	n133 [label="Keyword(while)"] ;
+
+	n134 ;
+	n134 [label="Separator(()"] ;
+
+	n102 ;
+	n102 [label="OP(--)(post)"] ;
+	n102 -- n99 ;
+
+	n135 ;
+	n135 [label="Separator())"] ;
+
+	n129 ;
+	n129 [label="Block"] ;
+	n129 -- n130 ;
+	n129 -- n125 ;
+	n129 -- n131 ;
+
+	n16 ;
+	n16 [label="ID(args)"] ;
+
+	n12 ;
+	n12 [label="Dims"] ;
+	n12 -- n13 ;
+	n12 -- n14 ;
+
+	n40 ;
+	n40 [label="BlockStatements"] ;
+	n40 -- n30 ;
+	n40 -- n38 ;
+
+	n56 ;
+	n56 [label="IfThenStatement"] ;
+	n56 -- n57 ;
+	n56 -- n58 ;
+	n56 -- n43 ;
+	n56 -- n59 ;
+	n56 -- n54 ;
+
+	n90 ;
+	n90 [label="Keyword(for)"] ;
+
+	n91 ;
+	n91 [label="Separator(()"] ;
+
+	n66 ;
+	n66 [label="LocalVariableDeclaration"] ;
+	n66 -- n61 ;
+	n66 -- n64 ;
+
+	n92 ;
+	n92 [label="Separator(;)"] ;
+
+	n71 ;
+	n71 [label="OP(<)"] ;
+	n71 -- n67 ;
+	n71 -- n70 ;
+
+	n93 ;
+	n93 [label="Separator(;)"] ;
+
+	n73 ;
+	n73 [label="OP(++)(post)"] ;
+	n73 -- n72 ;
+
+	n94 ;
+	n94 [label="Separator())"] ;
+
+	n86 ;
+	n86 [label="Block"] ;
+	n86 -- n87 ;
+	n86 -- n84 ;
+	n86 -- n88 ;
+
+	n99 ;
+	n99 [label="PrimaryNoNewArray"] ;
+	n99 -- n100 ;
+	n99 -- n98 ;
+	n99 -- n101 ;
+
+	n130 ;
+	n130 [label="Separator({)"] ;
+
+	n125 ;
+	n125 [label="IfThenStatement"] ;
+	n125 -- n126 ;
+	n125 -- n127 ;
+	n125 -- n110 ;
+	n125 -- n128 ;
+	n125 -- n123 ;
+
+	n131 ;
+	n131 [label="Separator(})"] ;
+
+	n13 ;
+	n13 [label="Separator([)"] ;
+
+	n14 ;
+	n14 [label="Separator(])"] ;
+
+	n30 ;
+	n30 [label="LocalVariableDeclarationStatement"] ;
+	n30 -- n29 ;
+	n30 -- n31 ;
+
+	n38 ;
+	n38 [label="LocalVariableDeclarationStatement"] ;
+	n38 -- n37 ;
+	n38 -- n39 ;
+
+	n57 ;
+	n57 [label="Keyword(if)"] ;
+
+	n58 ;
+	n58 [label="Separator(()"] ;
+
+	n43 ;
+	n43 [label="OP(>)"] ;
+	n43 -- n41 ;
+	n43 -- n42 ;
+
+	n59 ;
+	n59 [label="Separator())"] ;
+
+	n54 ;
+	n54 [label="ExpressionStatement"] ;
+	n54 -- n49 ;
+	n54 -- n55 ;
+
+	n61 ;
+	n61 [label="Keyword(int)"] ;
+
+	n64 ;
+	n64 [label="VariableDeclarator"] ;
+	n64 -- n62 ;
+	n64 -- n65 ;
+	n64 -- n63 ;
+
+	n67 ;
+	n67 [label="ID(i)"] ;
+
+	n70 ;
+	n70 [label="OP(-)"] ;
+	n70 -- n68 ;
+	n70 -- n69 ;
+
+	n72 ;
+	n72 [label="ID(i)"] ;
+
+	n87 ;
+	n87 [label="Separator({)"] ;
+
+	n84 ;
+	n84 [label="ExpressionStatement"] ;
+	n84 -- n79 ;
+	n84 -- n85 ;
+
+	n88 ;
+	n88 [label="Separator(})"] ;
+
+	n100 ;
+	n100 [label="Separator(()"] ;
+
+	n98 ;
+	n98 [label="OP(+)"] ;
+	n98 -- n96 ;
+	n98 -- n97 ;
+
+	n101 ;
+	n101 [label="Separator())"] ;
+
+	n126 ;
+	n126 [label="Keyword(if)"] ;
+
+	n127 ;
+	n127 [label="Separator(()"] ;
+
+	n110 ;
+	n110 [label="OP(%)"] ;
+	n110 -- n106 ;
+	n110 -- n109 ;
+
+	n128 ;
+	n128 [label="Separator())"] ;
+
+	n123 ;
+	n123 [label="ExpressionStatement"] ;
+	n123 -- n118 ;
+	n123 -- n124 ;
+
+	n29 ;
+	n29 [label="LocalVariableDeclaration"] ;
+	n29 -- n24 ;
+	n29 -- n27 ;
+
+	n31 ;
+	n31 [label="Separator(;)"] ;
+
+	n37 ;
+	n37 [label="LocalVariableDeclaration"] ;
+	n37 -- n32 ;
+	n37 -- n35 ;
+
+	n39 ;
+	n39 [label="Separator(;)"] ;
+
+	n41 ;
+	n41 [label="ID(x)"] ;
+
+	n42 ;
+	n42 [label="ID(y)"] ;
+
+	n49 ;
+	n49 [label="MethodInvocation"] ;
+	n49 -- n45 ;
+	n49 -- n50 ;
+	n49 -- n51 ;
+	n49 -- n52 ;
+	n49 -- n48 ;
+	n49 -- n53 ;
+
+	n55 ;
+	n55 [label="Separator(;)"] ;
+
+	n62 ;
+	n62 [label="ID(i)"] ;
+
+	n65 ;
+	n65 [label="OP(=)"] ;
+
+	n63 ;
+	n63 [label="Literal(0)"] ;
+
+	n68 ;
+	n68 [label="ID(x)"] ;
+
+	n69 ;
+	n69 [label="ID(y)"] ;
+
+	n79 ;
+	n79 [label="MethodInvocation"] ;
+	n79 -- n75 ;
+	n79 -- n80 ;
+	n79 -- n81 ;
+	n79 -- n82 ;
+	n79 -- n78 ;
+	n79 -- n83 ;
+
+	n85 ;
+	n85 [label="Separator(;)"] ;
+
+	n96 ;
+	n96 [label="ID(x)"] ;
+
+	n97 ;
+	n97 [label="ID(y)"] ;
+
+	n106 ;
+	n106 [label="PrimaryNoNewArray"] ;
+	n106 -- n107 ;
+	n106 -- n105 ;
+	n106 -- n108 ;
+
+	n109 ;
+	n109 [label="Literal(2)"] ;
+
+	n118 ;
+	n118 [label="MethodInvocation"] ;
+	n118 -- n112 ;
+	n118 -- n119 ;
+	n118 -- n120 ;
+	n118 -- n121 ;
+	n118 -- n117 ;
+	n118 -- n122 ;
+
+	n124 ;
+	n124 [label="Separator(;)"] ;
+
+	n24 ;
+	n24 [label="Keyword(int)"] ;
+
+	n27 ;
+	n27 [label="VariableDeclarator"] ;
+	n27 -- n25 ;
+	n27 -- n28 ;
+	n27 -- n26 ;
+
+	n32 ;
+	n32 [label="Keyword(int)"] ;
+
+	n35 ;
+	n35 [label="VariableDeclarator"] ;
+	n35 -- n33 ;
+	n35 -- n36 ;
+	n35 -- n34 ;
+
+	n45 ;
+	n45 [label="TypeName"] ;
+	n45 -- n44 ;
+	n45 -- n46 ;
+	n45 -- n47 ;
+
+	n50 ;
+	n50 [label="Separator(.)"] ;
+
+	n51 ;
+	n51 [label="ID(println)"] ;
+
+	n52 ;
+	n52 [label="Separator(()"] ;
+
+	n48 ;
+	n48 [label="Literal(1)"] ;
+
+	n53 ;
+	n53 [label="Separator())"] ;
+
+	n75 ;
+	n75 [label="TypeName"] ;
+	n75 -- n74 ;
+	n75 -- n76 ;
+	n75 -- n77 ;
+
+	n80 ;
+	n80 [label="Separator(.)"] ;
+
+	n81 ;
+	n81 [label="ID(println)"] ;
+
+	n82 ;
+	n82 [label="Separator(()"] ;
+
+	n78 ;
+	n78 [label="ID(i)"] ;
+
+	n83 ;
+	n83 [label="Separator())"] ;
+
+	n107 ;
+	n107 [label="Separator(()"] ;
+
+	n105 ;
+	n105 [label="OP(+)"] ;
+	n105 -- n103 ;
+	n105 -- n104 ;
+
+	n108 ;
+	n108 [label="Separator())"] ;
+
+	n112 ;
+	n112 [label="TypeName"] ;
+	n112 -- n111 ;
+	n112 -- n113 ;
+	n112 -- n114 ;
+
+	n119 ;
+	n119 [label="Separator(.)"] ;
+
+	n120 ;
+	n120 [label="ID(println)"] ;
+
+	n121 ;
+	n121 [label="Separator(()"] ;
+
+	n117 ;
+	n117 [label="OP(+)"] ;
+	n117 -- n115 ;
+	n117 -- n116 ;
+
+	n122 ;
+	n122 [label="Separator())"] ;
+
+	n25 ;
+	n25 [label="ID(x)"] ;
+
+	n28 ;
+	n28 [label="OP(=)"] ;
+
+	n26 ;
+	n26 [label="Literal(20)"] ;
+
+	n33 ;
+	n33 [label="ID(y)"] ;
+
+	n36 ;
+	n36 [label="OP(=)"] ;
+
+	n34 ;
+	n34 [label="Literal(18)"] ;
+
+	n44 ;
+	n44 [label="ID(System)"] ;
+
+	n46 ;
+	n46 [label="Separator(.)"] ;
+
+	n47 ;
+	n47 [label="ID(out)"] ;
+
+	n74 ;
+	n74 [label="ID(System)"] ;
+
+	n76 ;
+	n76 [label="Separator(.)"] ;
+
+	n77 ;
+	n77 [label="ID(out)"] ;
+
+	n103 ;
+	n103 [label="ID(x)"] ;
+
+	n104 ;
+	n104 [label="ID(y)"] ;
+
+	n111 ;
+	n111 [label="ID(System)"] ;
+
+	n113 ;
+	n113 [label="Separator(.)"] ;
+
+	n114 ;
+	n114 [label="ID(out)"] ;
+
+	n115 ;
+	n115 [label="ID(x)"] ;
+
+	n116 ;
+	n116 [label="ID(y)"] ;
+
+}
